@@ -1,0 +1,89 @@
+*{
+    font-family: sans-serif;
+}
+#all{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+img{
+    border-radius: 5px;
+}
+#cart-container{
+    width: 60%;
+    height: 100%;
+    border: solid whitesmoke;
+    /* float: right; */
+    margin-left: 20px;
+    box-shadow: rgb(0, 0, 0) 0px 5px 15px;
+}
+button:hover{
+    cursor: pointer;
+}
+#items>.item,#tp{
+    border: 2px solid  rgb(212, 212, 194);
+    display: flex;
+    width: 90%;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    height: fit-content;
+}
+#items > .item  h3{
+    margin-top: 0px;
+}
+.item>div{
+    margin-left: 10px;
+}
+h6,p,span{
+    margin-top: 0px;
+    padding: 0px;
+}
+div h6{
+    display: inline;
+}
+h6+button{
+    margin: 10px;
+}
+#tp > button{
+    width: 40%;
+    height: 90%;
+    float: right;
+    /* margin: 5px; */
+    background-color: yellow;
+    border-color: yellow;
+    text-decoration-color: white;
+    border-radius: 6px;
+}
+#tp > h2{
+    margin: auto;
+    margin-left: 0px;
+}
+#tp{
+    justify-content: space-between;
+    height: 50px;
+    padding: 5px;
+    border-color: white;
+    position: static;
+}
+
+/* body{
+    background-image: url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/9657de181048125.Y3JvcCw5NjUsNzU0LDAsMA.jpg);
+} */
+
+#price{
+    width: 35%;
+    height: 400px;
+    border: solid whitesmoke;
+    /* float: right; */
+    box-shadow: rgb(0, 0, 0) 0px 5px 15px;
+}
+h6{
+    font-size: 18px;
+    font-weight: 500;
+    color: #212121;
+}
+
+.item{
+    padding: 10px;
+}
