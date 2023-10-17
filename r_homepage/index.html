@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <script src="https://kit.fontawesome.com/c3011d6d48.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../r_navbar/r_navbar.css">
+    <link rel="stylesheet" href="../r_footer/r_footer.css">
+    <title>Auto Part Company | Home</title>
 </head>
 <body>
+    <div id="navbar_import"></div>
     
+    
+
+    <div id="footer_import"></div>
 </body>
+    <script type="module">
+        import {navbar} from "../r_navbar/r_navbar.js"
+        let navbars=document.getElementById("navbar_import");
+        navbars.innerHTML=navbar();
+    </script>
+    <script type="module">
+        import {footer} from "../r_footer/r_footer.js"
+        let footers=document.getElementById("footer_import");
+        footers.innerHTML=footer();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".hamburger").click(function () {
+                $(".slide-menu").animate({ left: "0" });
+            });
+
+            $(".slide-menu").click(function () {
+                $(".slide-menu").animate({ left: "-250px" });
+            });
+        });
+    </script>
 </html>
