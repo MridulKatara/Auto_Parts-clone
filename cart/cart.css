@@ -3,19 +3,23 @@
 }
 #all{
     width: 100%;
+    /* height: 100vh; */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    /* position: fixed;
+    overflow: hidden; */
+    
 }
 img{
     border-radius: 5px;
 }
 #cart-container{
-    width: 60%;
+    width: 50%;
     height: 100%;
     border: solid whitesmoke;
     /* float: right; */
     margin-left: 20px;
-    box-shadow: rgb(0, 0, 0) 0px 5px 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 button:hover{
     cursor: pointer;
@@ -50,8 +54,8 @@ h6+button{
     height: 90%;
     float: right;
     /* margin: 5px; */
-    background-color: yellow;
-    border-color: yellow;
+    background-color: orange;
+    border-color: orange;
     text-decoration-color: white;
     border-radius: 6px;
 }
@@ -72,11 +76,16 @@ h6+button{
 } */
 
 #price{
-    width: 35%;
-    height: 400px;
+    width: 30%;
+    height: fit-content;
     border: solid whitesmoke;
     /* float: right; */
-    box-shadow: rgb(0, 0, 0) 0px 5px 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 5px 30px;
+    display: inline;
+}
+#price span {
+    float: inline-end;
 }
 h6{
     font-size: 18px;
@@ -86,4 +95,10 @@ h6{
 
 .item{
     padding: 10px;
+}
+#increase, #decrease{
+    font-size: smaller;
+    background-color: white;
+    border-radius: 40%;
+    border-color: grey;
 }
