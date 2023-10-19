@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shipping Address</title>
+    <link rel="stylesheet" type="text/css" href="./address.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWDT15MVSyRdaiZELgIeWoXHXDrPh-MiA&libraries=places"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Shipping Address</h1>
+        <form id="addressForm">
+            <!-- Form Fields -->
+            <div class="form-group">
+                <label for="streetAddress">Street Address</label>
+                <input type="text" id="streetAddress" required>
+            </div>
+            <div class="form-group">
+                <label for="postalCode">ZIP/Postal Code</label>
+                <input type="text" id="postalCode" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City/District</label>
+                <input type="text" id="city" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State/Province</label>
+                <input type="text" id="state" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" id="county" required>
+            </div>
+            <button id="proceedBtn">Proceed to Payment</button>
+        </form>
+    </div>
+    <img src="../image/defender.jpg" alt="Left Image" class="left-image">
+    <img src="../image/hero-image-mustang.webp" alt="Right Image" class="right-image">
+    <script src="./address.js"></script>
+</body>
+</html>

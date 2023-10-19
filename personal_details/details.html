@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Details</title>
+    <link rel="stylesheet" type="text/css" href="./details.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Billings Details</h1>
+        <form id="personalDetailForm">
+            <!-- Form Fields -->
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" required>
+            </div>
+            <a href="../address/address.html"><button id="submitBtn">Submit</button></a>
+        </form>
+    </div>
+    <img src="../image/personal_details.jpeg" alt="Your Image" class="image">
+    <img src="../image/personal_left.jpeg" alt="" class="image-left">
+    <script src="./details.js"></script>
+</body>
+</html>
