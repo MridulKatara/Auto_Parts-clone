@@ -33,22 +33,58 @@
             </div>
         </div>
         <div id="content">
-            <div id="filters">
-                <p><input type="checkbox" id="TYRES_SET" value="TYRES SET">TYRES SET</p>
-                <p><input type="checkbox" id="BRAKE_PAD" value="BRAKE PAD">BRAKE PAD</p>
-                <p><input type="checkbox" id="BATTERIES" value="BATTERIES">BATTERIES</p>
-                <p><input type="checkbox" id="ENGINE_OIL" value="ENGINE OIL">ENGINE OIL</p>
-                <div id="price_range_filter_container">
-                    <p>0</p><input id="price_range_filter" type="range" name="" id="" min="0" step="200" value="4000" max="4000">
-                    <p>4000</p>
+          
+            <div id="productSidebar">
+                <div id="filterBrand" class="filter">
+                    <h5>BRAND</h5>
+                    <form action="">
+                        <!-- Replace the checkbox labels with brand names from your data -->
+                        <div>
+                            <input class="brands" type="checkbox" value="AirFlow">
+                        <label for="AirFlow">AirFlow</label>
+                        </div><br>
+                        
+                       <div> <input class="brands" type="checkbox" value="TieMaster">
+                        <label for="TieMaster">TieMaster</label></div><br>
+
+                        <div> <input class="brands" type="checkbox" value="AutoTech">
+                            <label for="AutoTech">AutoTech</label></div><br>
+                           
+            
+                        <!-- Add more checkboxes for other brands as needed -->
+                    </form>
+                </div>
+                <hr>
+                <div id="filterCategory" class="filter">
+                    <h5>CATEGORY</h5>
+                    <form action="">
+                        <!-- Replace the checkbox labels with category names from your data -->
+                        <div><input class="category" type="checkbox" value="Oil Filter">
+                            <label for="Oil Filter">Oil Filter</label></div><br>
+            
+                     <div>   <input class="category" type="checkbox" value="Steering System">
+                        <label for="Steering System">Steering System</label></div><br>
+
+                        <div>   <input class="category" type="checkbox" value=" Air Filter">
+                            <label for=" Air Filter"> Air Filter</label></div><br>
+            
+                        <!-- Add more checkboxes for other categories as needed -->
+                    </form>
+                </div>
+                <hr>
+                <div id="filterPrice" class="filter">
+                    <h5>PRICE</h5>
+                    <div id="price_range_filter_container">
+                        <p>1000</p><input id="price_range_filter" type="range" name="" id="" min="1000" step="200" value="9000" max="9000">
+                        <p>9000</p>
+                    </div>
                 </div>
             </div>
             
+              
+            
             <div id="products">
-                <div id="filters_sort">
-                    <div id="filters_applied"></div>
-                    <div id="sort_by"></div>
-                </div>
+                
                 <div id="products_container"></div>
             </div>
         </div>
@@ -72,6 +108,10 @@
                             </g>
                         </svg>
                     </button>
+
+                    <div id="popularProducts_body">
+        
+                    </div>
                     <button id="next_popular_product">
                         <svg fill="#ffffff" height="32px" width="32px" version="1.1" id="Layer_1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330"
@@ -87,12 +127,11 @@
                     </button>
                 </div>
             </div>
-            <div id="popularProducts_body">
-        
-            </div>
+            
         </div>
     <div id="footer"></div>
     </div>
 </body>
 <script src="./product.js"></script>
+<script src="./popular.js"></script>
 </html>
