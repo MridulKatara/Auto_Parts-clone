@@ -18,10 +18,12 @@ function navbar(){
                     <button id="search_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
                 <div>
-                    <p>My Account</p>
-                    <p><a href="#">Login/Signup</a></p>
+                <span id="username_text"></span>
+                <button id="logout_text" style="display: none">Logout</button>
+                <p><a href="login.html" id="login_text">Login</a></p>
                     <p><i class="fa-solid fa-heart"></i></p>
                     <p><i class="fa-solid fa-cart-shopping"></i></p>
+                    
                 </div>
             </div>
         </div>

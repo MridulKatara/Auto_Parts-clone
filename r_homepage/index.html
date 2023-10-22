@@ -464,7 +464,7 @@
 
     <!-- Our bLog Start -->
 
-    <!-- <div id="blog_Container">
+    <div id="blog_Container">
         <div id="yel"></div>
         <div>
             <h2>OUR BLOG</h2>
@@ -526,13 +526,13 @@
             </div>
             <button class="right" onclick="rightScrollBlog()"><i class="arrow right1"></i></button>
         </div>
-    </div> -->
+    </div>
 
     <!-- Our bLog End -->
 
     <!-- Our Offers Start -->
 
-    <!-- <div id="offers_container">
+    <div id="offers_container">
         <h2>OUR OFFERS</h2>
         <button class="left" onclick="leftScrollOffer()"><i class="arrow left1"></i></button>
         <div id="offers_boxes">
@@ -575,14 +575,14 @@
 
         </div>
         <button class="right" onclick="rightScrollOffer()"><i class="arrow right1"></i></button>
-    </div> -->
+    </div>
 
     <!-- Our Offers End -->
 
 
     <!-- Makes Models Start -->
 
-    <!-- <div id="mm_container">
+    <div id="mm_container">
         <div>
             <a href="#">FEATURED MAKES</a>
             <a href="#">FEATURED MODELS</a>
@@ -649,7 +649,7 @@
                 <p><i class="fa-solid fa-chevron-right"></i></p>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
     <div id="footer_import"></div>
@@ -679,6 +679,47 @@
                 $(".slide-menu").animate({ left: "-250px" });
             });
         });
+    </script>
+    <script>
+let loggedIn = false;
+
+function handleLogout() {
+    loggedIn = false;
+    showLoginUI();
+}
+
+function showAdminUI(username) {
+    document.getElementById("username_text").innerText = `Welcome, ${username} (Admin)`;
+    document.getElementById("login_text").style.display = "none";
+    document.getElementById("username_text").style.display = "inline";
+    document.getElementById("logout_text").style.display = "inline";
+}
+
+function showLoginUI() {
+    document.getElementById("username_text").innerText = "";
+    document.getElementById("login_text").style.display = "inline";
+    document.getElementById("username_text").style.display = "none";
+    document.getElementById("logout_text").style.display = "none";
+}
+
+// Check if the user is already logged in (you can use any criteria here)
+if (loggedIn) {
+    const username = "AdminUser"; // Replace with the actual username
+    showAdminUI(username);
+} else {
+    showLoginUI();
+}
+
+// Login event (simulated login)
+document.getElementById("login_text").addEventListener("click", function (e) {
+    e.preventDefault();
+    const username = "AdminUser"; // Replace with the actual username
+    loggedIn = true;
+    showAdminUI(username);
+});
+
+// Logout event
+document.getElementById("logout_text").addEventListener("click", handleLogout);
     </script>
 
 </html>
