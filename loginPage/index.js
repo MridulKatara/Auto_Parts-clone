@@ -3,6 +3,7 @@ const sign_in_btn = document.querySelector('#sign-in-btn');
 const sign_up_btn = document.querySelector('#sign-up-btn');
 const container = document.querySelector('.container');
 const signUpGoogle = document.getElementById('signup_google');
+const loginGoogle = document.getElementById("login_google");
 sign_up_btn.addEventListener('click', () => {
   container.classList.add('sign-up-mode');
 });
@@ -216,5 +217,30 @@ signInWithPopup(auth, provider)
 
 })
 
-
+loginGoogle.addEventListener("click", (e)=>{
+  e.preventDefault();
+  console.log("hi");
+  signInWithPopup(auth, provider)
+  
+    .then((result) => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      // const token = credential.accessToken;
+    
+      const user = result.user;
+     console.log(user);
+     window.location.href = "../r_homepage/index.html"
+     
+    }).catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // const email = error.customData.email;
+      // const credential = GoogleAuthProvider.credentialFromError(error);
+      // ...
+    });
+  
+  })
+  
+  
 
