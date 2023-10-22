@@ -218,7 +218,7 @@ populateProducts();
 
 //pagination
 
-const productsPerPageList = 11;
+const productsPerPageList = 32;
 function displayProducts(pageNumber, productsPerPage) {
   // Calculate the start and end indices for the current page
   const startIndex = (pageNumber - 1) * productsPerPage;
