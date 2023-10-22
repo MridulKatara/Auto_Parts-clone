@@ -48,6 +48,21 @@ nav {
     width: 50%;
 }
 
+#login_text{
+    color: #949494;
+    font-size: 17px;
+    text-decoration: none;
+}
+#logout_text{
+    color: #949494;
+    border: 1px solid #949494;
+    border-radius: 20px;
+   margin: 11px;
+}
+#username_text{
+    margin: 13px;
+    font-size: 20px;
+}
 .logo>div>img {
     width: 100%;
 }
