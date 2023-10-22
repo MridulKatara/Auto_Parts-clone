@@ -1,131 +1,155 @@
-body{
-    font-family: sans-serif;
+body {
+    font-family: 'Arial', sans-serif;
     background-color: #f1f3f6;
 }
-#all{
+
+#all {
     width: 100%;
-    /* height: 100vh; */
     display: flex;
     justify-content: space-around;
-    /* position: fixed;
-    overflow: hidden; */
-    
 }
-img{
+
+img {
     border-radius: 5px;
 }
-#cart-container{
+
+#cart-container {
     width: 50%;
     height: 100%;
-    border: solid whitesmoke;
-    /* float: right; */
+    border: 1px solid #ccc;
     margin-left: 20px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); 
+    background-color: #fff;
+    padding: 20px;
 }
-button:hover{
+
+button:hover {
     cursor: pointer;
 }
-#items>.item,#tp{
-    border: 2px solid  rgb(212, 212, 194);
+
+#items > .item, #tp {
+    border: 2px solid #d4d4c2;
     display: flex;
     width: 90%;
     border-radius: 10px;
     margin: auto;
     margin-bottom: 10px;
-    height: fit-content;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05); 
 }
-#items > .item  h3{
-    margin-top: 0px;
+
+#items > .item h3 {
+    margin-top: 0;
 }
-.item>div{
+
+.item > div {
     margin-left: 10px;
 }
-h6,p,span{
-    margin-top: 0px;
-    padding: 0px;
+
+h6, p, span {
+    margin: 0;
+    padding: 0;
 }
-div h6{
+
+div h6 {
     display: inline;
 }
-h6+button{
+
+h6 + button {
     margin: 10px;
 }
-#tp > button{
+
+#tp > button {
     width: 40%;
     height: 90%;
     float: right;
-    /* margin: 5px; */
-    background-color: orange;
+    background-color: orange; 
     border-color: orange;
-    text-decoration-color: white;
+    color: #fff;
     border-radius: 6px;
 }
-#tp > h2{
+
+#tp > h2 {
     margin: auto;
-    margin-left: 0px;
+    margin-left: 0;
 }
-#tp{
+
+#tp {
     justify-content: space-between;
     height: 50px;
     padding: 5px;
-    border-color: white;
-    position: static;
+    border: 1px solid #ccc;
+    background-color: #fff;
 }
 
-/* body{
-    background-image: url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/9657de181048125.Y3JvcCw5NjUsNzU0LDAsMA.jpg);
-} */
-
-#price{
+#price {
     width: 30%;
     height: fit-content;
-    border: solid whitesmoke;
-    /* float: right; */
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    padding: 5px 30px;
-    display: inline;
-}
-#price span {
-    float: inline-end;
-}
-h6{
-    font-size: 18px;
-    font-weight: 500;
-    color: #212121;
-}
-
-.item{
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
     padding: 10px;
 }
-#increase, #decrease{
-    font-size: smaller;
-    background-color: white;
-    border-radius: 40%;
-    border-color: grey;
+
+#price span {
+    float: right;
+    font-weight: bold;
 }
-#removeBtn{
-    color:#212121;
-    background-color:RGBA(0, 0, 0, 0);
-    font-family :Arial sans-serif;
-    font-size:16px;
+
+h6 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333; 
+}
+
+.item {
+    padding: 10px;
+}
+
+#increase, #decrease {
+    font-size: smaller;
+    background-color: #fff;
+    border-radius: 40%;
+    border: 1px solid #ccc;
+}
+
+#removeBtn {
+    color: #d65b50; 
+    background-color: transparent;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
     border: none;
 }
-#removeBtn:hover{
-    color: blue;
+
+#removeBtn:hover {
+    color: #f00;
 }
-
-
 
 /* Media Queries */
 
-@media (max-width:582px) {
-    #price{
+@media (max-width: 582px) {
+    #price {
         display: none;
     }
-    #cart-container{
+    #cart-container {
         width: 100%;
     }
 }
-#items, .item, #price, #tp{
-    background-color: #fff;
+
+
+.shopnow{
+    margin-bottom: 0px;
+}
+@keyframes slide {
+    0% { left: 0; }
+    100% { left: 50%; }
+}
+.shopnow {
+    width: 200px;
+    /* height: 50px;  */
+    /* background-color: rgb(160, 220, 243); */
+    position: relative;
+    animation: slide 3s linear infinite alternate;
+    overflow: hidden;
 }

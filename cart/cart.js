@@ -1,25 +1,25 @@
 var products = [
-//     {
-//         id:1,
-//         images : ['https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/be7b94169533691.Y3JvcCwxOTk5LDE1NjQsMCwxMTg.png'],
-//         name : 'Auto Parts',
-//         quantity : 1,
-//         price : 20000,
-//     },
-//     {
-//         id:2,
-//         images : ['https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/be7b94169533691.Y3JvcCwxOTk5LDE1NjQsMCwxMTg.png'],
-//         name : 'Auto Parts',
-//         quantity : 1,
-//         price : 20000,
-//     },
-//     {
-//         id:3,
-//         images : ['https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/be7b94169533691.Y3JvcCwxOTk5LDE1NjQsMCwxMTg.png'],
-//         name : 'Auto Parts',
-//         quantity : 1,
-//         price : 20000,
-//     },
+    {
+        id:1,
+        images : ['https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/be7b94169533691.Y3JvcCwxOTk5LDE1NjQsMCwxMTg.png'],
+        name : 'Auto Parts',
+        quantity : 1,
+        price : 20000,
+    },
+    {
+        id:2,
+        images : ['https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/be7b94169533691.Y3JvcCwxOTk5LDE1NjQsMCwxMTg.png'],
+        name : 'Auto Parts',
+        quantity : 1,
+        price : 20000,
+    },
+    {
+        id:3,
+        images : ['https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/be7b94169533691.Y3JvcCwxOTk5LDE1NjQsMCwxMTg.png'],
+        name : 'Auto Parts',
+        quantity : 1,
+        price : 20000,
+    },
     
     
 ]
@@ -33,14 +33,12 @@ function display(products){
     if(products.length==0){
         var img = document.createElement('img');
         img.src = "https://assets-v2.lottiefiles.com/a/cbbb0d80-1185-11ee-bb81-1f8a0ee065ae/kGZag9os6n.gif"
-        img.style.width = "100%";
-        var shopnow = document.createElement('button');
-        shopnow.style.float = "right"
-        shopnow.innerText = 'Shop Now'
-        shopnow.style.width = "150px"
-        shopnow.style.color = "green"
-        shopnow.style.backgroundColor = "lightgrey"
-        img.style.height = "500px"
+        img.style.width = "80%";
+        img.style.marginTop = "0px"
+        img.style.paddingTop = "0px"
+        var shopnow = document.createElement('h3');
+        shopnow.className = "shopnow"
+        shopnow.innerText = 'Your cart is Empty!'
         items.append(shopnow,img);
 
     }
