@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #40424089;
 }
 #itemdetails{
     width: 90%;
@@ -38,11 +39,14 @@ border-radius: 6px;
     margin-left: 3.3rem;
     display: flex;
     flex-direction: column;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
 }
 #description  :nth-child(1) button{
    width: 80%;
    margin: auto;
-    background-color: beige;
+    background-color: rgb(228, 228, 82);
     border-radius: 19px;
     padding: 5px 0;
     margin-bottom: 1em;
@@ -50,7 +54,7 @@ border-radius: 6px;
 }
 #description  :nth-child(1) select{
     width: 70%;
-     background-color: beige;
+     background-color: rgb(228, 228, 82);
      border-radius: 19px;
      padding: 5px 0;
      margin-bottom: 1em;

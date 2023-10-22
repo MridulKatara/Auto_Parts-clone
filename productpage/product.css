@@ -1,5 +1,5 @@
  body{
-  background-color: rgb(240,203,175);
+  background-color: #40424089;
  }
  
  
@@ -243,7 +243,7 @@ input[type="range"] {
 
 .products-container .product{
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  background-color: rgb(247,247,247);
+  background-color: rgb(196,197,196);
   text-align: center;
   border-radius: 5px;
   display: flex;
