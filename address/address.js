@@ -1,108 +1,133 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const addressForm = document.getElementById("addressForm");
-    const postalCodeInput = document.getElementById("postalCode");
+    const addressForm = document.querySelector("form");
+    const postalCodeInput = document.getElementById("pin");
     const cityInput = document.getElementById("city");
     const stateInput = document.getElementById("state");
-    const countyInput = document.getElementById("county");
+    const countryInput = document.getElementById("Country");
+    const makeDefaultCheckbox = document.getElementById("makeDefault");
+    const errorContainer = document.getElementById("errorContainer");
 
-    // Static data for postal code to city and state mapping
-    const postalCodeData = {
-        "110001": { city: "New Delhi", state: "Delhi", county: "India" },
-        "400001": { city: "Mumbai", state: "Maharashtra", county: "India" },
-        "700001": { city: "Kolkata", state: "West Bengal", county: "India" },
-        "600001": { city: "Chennai", state: "Tamil Nadu", county: "India" },
-        "380001": { city: "Ahmedabad", state: "Gujarat", county: "India" },
-        "500001": { city: "Hyderabad", state: "Telangana", county: "India" },
-        "560001": { city: "Bengaluru", state: "Karnataka", county: "India" },
-        "110002": { city: "Connaught Place", state: "Delhi", county: "India" },
-        "600002": { city: "Mount Road", state: "Tamil Nadu", county: "India" },
-        "682001": { city: "Kochi", state: "Kerala", county: "India" },
-        "226001": { city: "Lucknow", state: "Uttar Pradesh", county: "India" },
-        "302001": { city: "Jaipur", state: "Rajasthan", county: "India" },
-        "700032": { city: "Howrah", state: "West Bengal", county: "India" },
-        "695014": { city: "Thiruvananthapuram", state: "Kerala", county: "India" },
-        "110003": { city: "Karol Bagh", state: "Delhi", county: "India" },
-        "380013": { city: "Navrangpura", state: "Gujarat", county: "India" },
-        "600003": { city: "Parrys Corner", state: "Tamil Nadu", county: "India" },
-        "400012": { city: "Parel", state: "Maharashtra", county: "India" },
-        "390001": { city: "Rajmahal Road", state: "Gujarat", county: "India" },
-        "281001": { city: "Mathura", state: "Uttar Pradesh", county: "India" },
-        "560002": { city: "Bangalore", state: "Karnataka", county: "India" },
-        "201301": { city: "Noida", state: "Uttar Pradesh", county: "India" },
-        "273001": { city: "Gorakhpur", state: "Uttar Pradesh", county: "India" },
-        "273003": { city: "Gorakhpur", state: "Uttar Pradesh", county: "India" },
-        "411047": { city: "Pune", state: "Maharashtra", county: "India" },
+       // Static data for postal code to city, state, and country mapping
+       const postalCodeData = {
+        "110001": { city: "New Delhi", state: "Delhi", country: "India" },
+        "400001": { city: "Mumbai", state: "Maharashtra", country: "India" },
+        "700001": { city: "Kolkata", state: "West Bengal", country: "India" },
+        "600001": { city: "Chennai", state: "Tamil Nadu", country: "India" },
+        "380001": { city: "Ahmedabad", state: "Gujarat", country: "India" },
+        "500001": { city: "Hyderabad", state: "Telangana", country: "India" },
+        "560001": { city: "Bengaluru", state: "Karnataka", country: "India" },
+        "110002": { city: "Connaught Place", state: "Delhi", country: "India" },
+        "600002": { city: "Mount Road", state: "Tamil Nadu", country: "India" },
+        "682001": { city: "Kochi", state: "Kerala", country: "India" },
+        "226001": { city: "Lucknow", state: "Uttar Pradesh", country: "India" },
+        "302001": { city: "Jaipur", state: "Rajasthan", country: "India" },
+        "700032": { city: "Howrah", state: "West Bengal", country: "India" },
+        "695014": { city: "Thiruvananthapuram", state: "Kerala", country: "India" },
+        "110003": { city: "Karol Bagh", state: "Delhi", country: "India" },
+        "380013": { city: "Navrangpura", state: "Gujarat", country: "India" },
+        "600003": { city: "Parrys Corner", state: "Tamil Nadu", country: "India" },
+        "400012": { city: "Parel", state: "Maharashtra", country: "India" },
+        "390001": { city: "Rajmahal Road", state: "Gujarat", country: "India" },
+        "281001": { city: "Mathura", state: "Uttar Pradesh", country: "India" },
+        "560002": { city: "Bangalore", state: "Karnataka", country: "India" },
+        "201301": { city: "Noida", state: "Uttar Pradesh", country: "India" },
+        "273001": { city: "Gorakhpur", state: "Uttar Pradesh", country: "India" },
+        "273003": { city: "Gorakhpur", state: "Uttar Pradesh", country: "India" },
+        "411047": { city: "Pune", state: "Maharashtra", country: "India" },
         // Add more postal code data here...
     };
 
-    function handleGeocodingResults() {
-        const postalCode = postalCodeInput.value;
+    // Function to fill city, state, and country fields based on postal code
+    function fillAddressDetails(postalCode) {
         const data = postalCodeData[postalCode];
-
         if (data) {
-            // Fill city and state fields with static data
             cityInput.value = data.city;
             stateInput.value = data.state;
-            countyInput.value = data.county;
-        } else {
-            console.log('No results found for this ZIP code.');
+            countryInput.value = data.country;
         }
     }
 
-    // Handle postal code input changes
-    postalCodeInput.addEventListener("change", handleGeocodingResults);
+    // Event listener for postal code input changes
+    postalCodeInput.addEventListener("change", function() {
+        const postalCode = postalCodeInput.value;
+        fillAddressDetails(postalCode);
+    });
 
-    
-    
-            // Simulated user data from the previous page
-            const userData = {
-                firstName: "John",
-                lastName: "Doe",
-                email: "johndoe@example.com",
-                phoneNumber: "123-456-7890"
-            };
-        
-            // Simulated order history
-            const orderHistory = [];
-        
-            // Set user information
-            addressForm.addEventListener("submit", function(event) {
-                event.preventDefault();
-        
-                const streetAddress = document.getElementById("streetAddress").value;
-        
-                // Collect shipping address data
-                const addressData = {
-                    streetAddress,
-                    postalCode: postalCodeInput.value,
-                    city: cityInput.value,
-                    state: stateInput.value,
-                    country: countryInput.value
-                };
-        
-                // Display user information
-                console.log("User Information:");
-                console.log("First Name: " + userData.firstName);
-                console.log("Last Name: " + userData.lastName);
-                console.log("Email Address: " + userData.email);
-                console.log("Phone Number: " + userData.phoneNumber);
-        
-                // Display shipping address
-                console.log("Shipping Address:");
-                console.log(addressData);
-        
-                // Here, you can add the order to the order history and send it to your API server for storage.
-                orderHistory.push({
-                    user: userData,
-                    address: addressData,
-                    success: true // Simulated success status
-                });
-        
-                // Simulated order history
-                console.log("Order History:");
-                console.log(orderHistory);
+       // Event listener for form submission
+       addressForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        errorContainer.innerHTML = "";
+
+        // Validate form inputs
+        const name = document.getElementById("name").value;
+        let number = document.getElementById("number").value;
+        const address = document.getElementById("address").value;
+        const pin = postalCodeInput.value;
+        const city = cityInput.value;
+        const state = stateInput.value;
+        const country = countryInput.value;
+
+        if (!name || !number || !address || !pin || !city || !state || !country) {
+            displayError("Please fill in all the required fields.");
+            return;
+        }
+
+        // Remove non-digit characters from the mobile number
+        number = number.replace(/\D/g, '');
+
+        if (number.length !== 10) {
+            displayError("Mobile number must contain exactly 10 digits.");
+            return;
+        }
+
+        const addressData = {
+            name,
+            number,
+            address,
+            pin,
+            city,
+            state,
+            country
+        };
+
+        // Check if "Make this my default address" is checked
+        if (makeDefaultCheckbox.checked) {
+            // Save the address data to local storage
+            const defaultAddress = JSON.stringify(addressData);
+            localStorage.setItem("defaultAddress", defaultAddress);
+        }
+
+        // You can do further processing with this data or send it to your server as needed.
+        console.log("Address Information:");
+        console.log(addressData);
+    });
+
+            // After processing the form, navigate to the payment page
+            document.getElementById("navigateLink").addEventListener("click", function() {
+                window.location.href = "../payment_page/payment.html";
             });
-        
+    
+            console.log("Address Information:");
+            console.log(addressData);
+    // Check if there's a default address in local storage and fill the form if available
+    const defaultAddress = localStorage.getItem("defaultAddress");
+    if (defaultAddress) {
+        const addressData = JSON.parse(defaultAddress);
+        document.getElementById("name").value = addressData.name;
+        document.getElementById("number").value = addressData.number;
+        document.getElementById("address").value = addressData.address;
+        postalCodeInput.value = addressData.pin;
+        fillAddressDetails(addressData.pin);
+    }
+
+    // Function to display error messages
+    function displayError(message) {
+        const errorElement = document.createElement("div");
+        errorElement.className = "error-message";
+        errorElement.textContent = message;
+        errorContainer.appendChild(errorElement);
+    }
+
 });
 
 

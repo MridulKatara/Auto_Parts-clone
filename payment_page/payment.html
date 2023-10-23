@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Payment </title>
+    <link rel="stylesheet" href="./payment.css">
+</head>
+<body>
+    <div class="layout">
+        <div id="headerUnderline">
+            <div id="header">
+                <div>
+                    <img height="45px"
+                            src="../image/logo.png" alt="">
+                </div>
+                <div>
+                    <p> <span class="navbarMiddle"> <a href="../../cart/cartPage.html" class="cart-page">BAG</a>  </span> ----------- <span class="navbarMiddle"> <a href="../address/address.html" id="add">ADDRESS</a></span>
+                        ----------- <span class="navbarMiddle navbarMiddlePayment"> PAYMENT </span> </p>
+                </div>
+                <div id="paymentNavSecure">
+                    <img height="28px" src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png"
+                        alt="">
+                    <p><span class="navbarMiddle">100 % SECURE</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="address-right">
+            <div class="price-container ">
+                <div id="priceBlockHeader" class="priceBlock-items">PRICE DETAILS
+                    (<span id="priceDetails">0</span> Items)</div>
+                <div class="price-detailBody">
+                    <div class="priceBreakUp" id="priceBlock">
+                        <div class="priceDetail-base-row">
+                            <span>Total MRP</span>
+                            <span class="priceDetail-base-value ">
+                                <span>₹</span>
+    
+                                <span id="totalmrp">0</span>
+                            </span>
+                        </div>
+                        <div class="priceDetail-base-row">
+                            <span>Discount on MRP</span>
+                            <span class="priceDetail-base-value priceDetail-base-discount">
+                                <span>- ₹</span>
+    
+                                <span id="totaldisc">0</span>
+                            </span>
+                        </div>
+                        <div class="priceDetail-base-row">
+                            <span>Convenience Fee
+                                <div class="priceDetail-Container">
+                                    <button font-size="body2" font-weight="bold" role="button"
+                                        class="css-one">
+                                        <div class="css-two">Know More</div>
+                                    </button>
+                                </div>
+                            </span>
+                            <span class="priceDetail-base-value convienceFee">
+    
+                                <span id="convenienceFee">₹ 99</span> <span
+                                    style="color: #03a685;">FREE</span>
+                            </span>
+                        </div>
+                        <div class="priceDetail-base-total">
+                            <span>Total Amount</span>
+                            <span class="priceDetail-base-value ">
+                                <span>₹</span>
+    
+                                <span id="totalamt">0</span>
+                            </span>
+                        </div>
+                        <button id="payment_btn">Pay Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footerContent">
+                <div id="footerContentImg">
+                    <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png" alt="" class="animated-image">
+                    <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png" alt="" class="animated-image">
+                    <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png" alt="" class="animated-image">
+                    <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ae.png" alt="" class="animated-image">
+                    <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-dc.png" alt="" class="animated-image">
+                    <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png" alt="" class="animated-image">
+                    <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png" alt="" class="animated-image">
+                    <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-rupay.png" alt="" class="animated-image">
+                    <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png" alt="" class="animated-image">
+                    <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png" alt="" class="animated-image">
+                </div>
+                <a href="">Need Help ? Contact Us</a>
+            </div>
+        </div>
+    </div>
+    <!-- Your payment button goes here -->
+
+    <!-- Include the Razorpay script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <!-- Your JavaScript code for Razorpay integration -->
+    <script>
+        var options = {
+            "key": "rzp_test_xkkA99Z3D9jiWf", // Replace with your Razorpay API key
+            "amount": 50000, // Replace with your desired amount (in paise)
+            "currency": "INR",
+            "name": "Auto Parts",
+            "description": "Test Payment",
+            "image": "../image/logo.png",
+            "handler": function (response){
+                window.location.href = "../thankyoupage/thankyou.html";
+            }
+        };
+
+        var rzp1 = new Razorpay(options);
+
+        document.getElementById('payment_btn').onclick = function(e){
+            rzp1.open();
+            e.preventDefault();
+        }
+    </script>
+</body>
+</html>
