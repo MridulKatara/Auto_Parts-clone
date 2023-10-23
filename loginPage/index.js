@@ -204,7 +204,7 @@ signInWithPopup(auth, provider)
   
     const user = result.user;
    console.log(user);
-   window.location.href = "../r_homepage/index.html"
+   window.location.href = "../index.html"
    
   }).catch((error) => {
     // Handle Errors here.
@@ -229,7 +229,7 @@ loginGoogle.addEventListener("click", (e)=>{
     
       const user = result.user;
      console.log(user);
-     window.location.href = "../r_homepage/index.html"
+     window.location.href = "../index.html"
      
     }).catch((error) => {
       // Handle Errors here.
