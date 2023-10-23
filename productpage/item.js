@@ -61,7 +61,7 @@ const impdetails =document.createElement("div");
     productBrand.textContent = ` ${itemdetails.brand}`;
 
     const productPrice = document.createElement("p");
-    productPrice.textContent = ` $${itemdetails.price.toFixed(2)}`;
+    productPrice.textContent = ` ₹${itemdetails.price.toFixed(2)}`;
 
     const productRatings = document.createElement("p");
 

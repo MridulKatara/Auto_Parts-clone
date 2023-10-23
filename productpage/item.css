@@ -42,7 +42,7 @@ border-radius: 6px;
 #description  :nth-child(1) button{
    width: 80%;
    margin: auto;
-    background-color: beige;
+   background-color: #f7c706;
     border-radius: 19px;
     padding: 5px 0;
     margin-bottom: 1em;
@@ -50,7 +50,7 @@ border-radius: 6px;
 }
 #description  :nth-child(1) select{
     width: 70%;
-     background-color: beige;
+    background-color: #f7c706;
      border-radius: 19px;
      padding: 5px 0;
      margin-bottom: 1em;
@@ -67,10 +67,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Add your CSS styles here */
-#secondcontainer {
-    /* Add any container styles here */
-}
+
 
 .overview-title {
     margin-left: 1rem;

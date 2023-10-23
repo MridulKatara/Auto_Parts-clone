@@ -7,6 +7,6 @@ setTimeout(function() {
     overlay.innerText = "Order confirmed";
     overlay.classList.add('overlay-second');
     setTimeout(function() {
-        window.location.href = "homepage.html";
+        window.location.href = "../index.html";
     }, 3000); // Redirect after 2 seconds
 }, 2000); // Switch image after 2 seconds

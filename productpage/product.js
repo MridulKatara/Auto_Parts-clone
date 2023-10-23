@@ -145,7 +145,22 @@ function createProductElement(product) {
   h3.textContent = product.name;
 
   const price = document.createElement("p");
-  price.textContent = `Price:  $${product.price}`;
+  price.textContent = `Price:  ₹${product.price}`;
+
+  const bag = document.createElement("button");
+  bag.textContent="Add to Cart";
+  bag.addEventListener("click", () => {
+    // Change the text content
+   
+    setTimeout(() => {
+        bag.textContent = "Added to Cart";
+        bag.style.backgroundColor="lightgreen";
+    }, 1000); 
+    setTimeout(() => {
+      bag.textContent = "Add to Cart";
+      bag.style.backgroundColor="";
+    }, 2000); // Reset after 2 seconds
+  });
 
   const img = document.createElement("img");
   img.setAttribute("src", product.images[0]);
@@ -161,7 +176,7 @@ function createProductElement(product) {
     localStorage.setItem(`product_${product.id}`, JSON.stringify(product));
   });
 
-  productElement.addEventListener("click", function () {
+  img.addEventListener("click", function () {
     window.location.href = "./item.html"
     localStorage.setItem('productkey', JSON.stringify(product));
   })
@@ -169,7 +184,8 @@ function createProductElement(product) {
   productElement.appendChild(img);
   productElement.appendChild(h3);
   productElement.appendChild(price);
-  productElement.appendChild(heartButton);
+  productElement.appendChild(bag);
+  // productElement.appendChild(heartButton);
 
   return productElement;
 }

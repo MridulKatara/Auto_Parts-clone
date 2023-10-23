@@ -1,24 +1,24 @@
 var products = [
     {
         id:1,
-        images : ['https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/be7b94169533691.Y3JvcCwxOTk5LDE1NjQsMCwxMTg.png'],
-        name : 'Auto Parts',
+        images : ['../image/cart1.webp'],
+        name : 'Spark Plug',
         quantity : 1,
-        price : 20000,
+        price : 459,
     },
     {
         id:2,
-        images : ['https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/be7b94169533691.Y3JvcCwxOTk5LDE1NjQsMCwxMTg.png'],
-        name : 'Auto Parts',
+        images : ['../image/cart2.webp'],
+        name : 'Brake Disc',
         quantity : 1,
-        price : 20000,
+        price : 5999,
     },
     {
         id:3,
-        images : ['https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/be7b94169533691.Y3JvcCwxOTk5LDE1NjQsMCwxMTg.png'],
-        name : 'Auto Parts',
+        images : ['../image/cart3.webp'],
+        name : 'Oil Filter',
         quantity : 1,
-        price : 20000,
+        price : 549,
     },
     
     
@@ -128,7 +128,7 @@ function total(arr){
 var nxtPage = document.querySelector('#tp>button');
 // console.log(nxtPage)
 nxtPage.addEventListener('click',function(event){
-    window.location.href='./address.html';
+    window.location.href='../address/address.html';
 })
 
 

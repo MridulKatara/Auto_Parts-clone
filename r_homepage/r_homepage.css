@@ -175,6 +175,15 @@ body {
 #categories_boxes>div>p:hover {
     color: #f8cd2f;
 }
+#categories_boxes>div>a:hover {
+    color: #f8cd2f;
+}
+
+#categories_boxes>div>a{
+    text-align: center;
+    margin: 15px 0 5px 0;
+    color: #949494;
+}
 
 /* categories end css */
 

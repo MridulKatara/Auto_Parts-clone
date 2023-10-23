@@ -120,7 +120,7 @@ await signInWithEmailAndPassword(auth, email, password)
       timer: 2000, // Auto-close the alert after 2 seconds
       customClass: "custom-swal-success", // Apply custom success styles
     });
-    window.location.href = "/homepage.html"; 
+    window.location.href = "../index.html"; 
     // ...
   })
   .catch((error) => {

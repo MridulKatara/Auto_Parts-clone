@@ -1,5 +1,5 @@
  body{
-  background-color: rgb(240,203,175);
+  background-color: rgba(250, 247, 244, 0.699);
  }
  
  
@@ -106,12 +106,12 @@
 
 .product >button{
   border: hidden;
-  position: absolute;
   background: none;
   cursor: pointer;
-  /* width: 20rem; */
   font-size: 1.35rem;
   transition: color 0.3s;
+  border: 2px solid red;
+  border-radius: 5px;
    
   }
 
@@ -260,13 +260,12 @@ height: 10rem;
 
 .products-container .product >button{
   border: hidden;
-  position: absolute;
   background: none;
   cursor: pointer;
-  /* width: 20rem; */
   font-size: 1.35rem;
   transition: color 0.3s;
-   
+  border: 2px solid red;
+  border-radius: 5px;
   }
 
 .prev-button{

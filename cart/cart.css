@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f1f3f6;
+    background-color: rgba(241, 243, 238, 0.582);
 }
 
 #all {
@@ -152,4 +152,53 @@ h6 {
     position: relative;
     animation: slide 3s linear infinite alternate;
     overflow: hidden;
+}
+
+
+
+#headerUnderline {
+    width: 100%;
+    border-bottom: 1px solid #F5F5F6;
+    margin-bottom: 30px;
+    background-color: #404240;
+    margin-top: -10px;
+}
+
+#header {
+    display: flex;
+    width: 92%;
+    color: rgb(105, 107, 121);
+    font-size: 10px;
+    margin: 20px auto 10px;
+    justify-content: space-between;
+}
+
+.navbarMiddle {
+    letter-spacing: 3px;
+    font-weight: bolder;
+    color: white;
+}
+
+
+#paymentNavSecure {
+    display: flex;
+    align-items: center;
+}
+
+#paymentNavSecure img {
+    margin-right: 5px;
+}
+
+
+.cart-page {
+    text-decoration: none;
+    color: #f7c706;
+    border-bottom: 2px solid #f7c706;
+}
+
+
+.navbarMiddle {
+    letter-spacing: 3px;
+    font-weight: bolder;
+    color: white;
 }
