@@ -6,7 +6,7 @@ const sortingSelect = document.getElementById("sorting");
 let isSortingApplied = false;
 
 function fetchDataFromAPI() {
-  fetch('https://drab-gold-goat-sock.cyclic.app/tyres')
+  fetch('https://aware-cyan-mussel.cyclic.app/tyres')
     .then(response => response.json())
     .then(data => {
       popularkData = data;
